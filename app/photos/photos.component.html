@@ -1,0 +1,9 @@
+<div class="Qrcodediv" *ngFor="let img of imagelist">
+ <img class='boxqrcode' src="{{img.url}}" width="100" height="100">
+ <div>{{img.title}}</div>
+ <div>{{img.id}}</div>
+ <div>{{img.url}}</div>
+ <button (click)="add(img)" *ngIf="Btn">{{img.id}}</button>
+ <button (click)="remove(img.id)" *ngIf="!Btn">Remove</button>
+</div>
+<app-table></app-table>
